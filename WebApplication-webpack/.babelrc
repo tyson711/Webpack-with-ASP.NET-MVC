@@ -1,0 +1,36 @@
+{
+  "env": {
+    "development": {
+      "presets": ["react", "stage-0"],
+      "plugins": ["transform-decorators-legacy"]
+    },
+    "production": {
+      "presets": [
+        [
+          "env",
+          {
+            "debug": false,
+            "useBuiltIns": true,
+            "modules": false
+          }
+        ],
+        "react",
+        "stage-0"
+      ],
+      "plugins": ["transform-decorators-legacy"]
+    },
+    "test": {
+      "presets": [
+        [
+          "env",
+          {
+            "modules": "commonjs"
+          }
+        ],
+        "react",
+        "stage-0"
+      ],
+      "plugins": ["transform-decorators-legacy"]
+    }
+  }
+}
